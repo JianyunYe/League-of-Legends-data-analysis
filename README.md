@@ -43,13 +43,14 @@ As mentioned above, I only kept the relevant columns I think are potentially use
 In addition, #since the game IDs are all duplicated with even numbers, we can assume that there are 17 games missing version numbers, and 1391 games that do not record the dragon, or it can be assumed that neither team played the dragon in these 1391 games. We will change the value of the missing version number to ‘unknown’ and the value of the missing dragon record to ‘unknown’. Apart from this, there are no missing values.
 
 The following is the header of the ‘team_data’ datasets.
-| gameid             | league   |   patch | side   | result   |   kills |   deaths |   assists | firstdragon   |   dragons |   opp_dragons | elders   | firstherald   | position   |
-|:-------------------|:---------|--------:|:-------|:---------|--------:|---------:|----------:|:--------------|----------:|--------------:|:---------|:--------------|:-----------|
-| 10660-10660_game_1 | DCup     |   13.24 | Blue   | False    |       3 |       16 |         7 | unknown       |         2 |             3 | unknown  | unknown       | team       |
-| 10660-10660_game_1 | DCup     |   13.24 | Red    | True     |      16 |        3 |        43 | unknown       |         3 |             2 | unknown  | unknown       | team       |
-| 10660-10660_game_2 | DCup     |   13.24 | Blue   | False    |       3 |       17 |         8 | unknown       |         0 |             4 | unknown  | unknown       | team       |
-| 10660-10660_game_2 | DCup     |   13.24 | Red    | True     |      17 |        3 |        42 | unknown       |         4 |             0 | unknown  | unknown       | team       |
-| 10660-10660_game_3 | DCup     |   13.24 | Blue   | True     |      21 |        3 |        32 | unknown       |         2 |             1 | unknown  | unknown       | team       |
+
+| gameid             | league | patch | side | result | kills | deaths | assists | firstdragon | dragons | opp_dragons | elders  | firstherald | position |
+|---------------------|--------|-------|------|--------|-------|--------|---------|-------------|---------|-------------|---------|-------------|----------|
+| 10660-10660_game_1 | DCup   | 13.24 | Blue | False  | 3     | 16     | 7       | unknown     | 2       | 3           | unknown | unknown     | team     |
+| 10660-10660_game_1 | DCup   | 13.24 | Red  | True   | 16    | 3      | 43      | unknown     | 3       | 2           | unknown | unknown     | team     |
+| 10660-10660_game_2 | DCup   | 13.24 | Blue | False  | 3     | 17     | 8       | unknown     | 0       | 4           | unknown | unknown     | team     |
+| 10660-10660_game_2 | DCup   | 13.24 | Red  | True   | 17    | 3      | 42      | unknown     | 4       | 0           | unknown | unknown     | team     |
+| 10660-10660_game_3 | DCup   | 13.24 | Blue | True   | 21    | 3      | 32      | unknown     | 2       | 1           | unknown | unknown     | team     |
 
 
 
