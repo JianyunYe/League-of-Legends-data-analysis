@@ -83,11 +83,13 @@ It can be seen that the team that gets the first dragon has a 56.8% probability 
 
 
 ## Interesting Aggregates
-| firstdragon   | result | kills   | deaths  | assists | dragons | opp_dragons |
+
+| Firstdragon   | Result | Kills   | Deaths  | Assists | Dragons | Opp Dragons |
 |---------------|--------|---------|---------|---------|---------|-------------|
 | False         | 3616   | 120256  | 135504  | 275586  | 12960   | 24063       |
 | True          | 4740   | 135037  | 120334  | 308969  | 24063   | 12960       |
-| unknown       | 1390   | 38998   | 39071   | 92801   | 6244    | 6244        |
+| Unknown       | 1390   | 38998   | 39071   | 92801   | 6244    | 6244        |
+
 
 
 I grouped the dataset by teams that got the first dragon and those that didn't, and then calculated the sum of all the data. The more interesting findings were that the team that got the first dragon, won, had more total kills, fewer deaths, more assists, and got more total dragons. This pretty much shows that getting the first dragon is extremely helpful in improving the team's stats.
@@ -195,6 +197,7 @@ The null hypothesis: the distribution of the ‘patch’ column is the same when
 The alternative hypothesis: the distribution of the ‘patch’ column is not the same when the ‘firstdragon’ column is missing as when it is not.
 
 Here is a graph of the ‘patch’ column.
+
 | Patch   | fb_missing = True  | fb_missing = False |
 |---------|-------------------:|-------------------:|
 | 13.24   |        0.0129403  |        0           |
