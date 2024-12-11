@@ -83,11 +83,12 @@ It can be seen that the team that gets the first dragon has a 56.8% probability 
 
 
 ## Interesting Aggregates
-| firstdragon   |   result |   kills |   deaths |   assists |   dragons |   opp_dragons |
-|:--------------|---------:|--------:|---------:|----------:|----------:|--------------:|
-| False         |     3616 |  120256 |   135504 |    275586 |     12960 |         24063 |
-| True          |     4740 |  135037 |   120334 |    308969 |     24063 |         12960 |
-| unknown       |     1390 |   38998 |    39071 |     92801 |      6244 |          6244 |
+| firstdragon   | result | kills   | deaths  | assists | dragons | opp_dragons |
+|---------------|--------|---------|---------|---------|---------|-------------|
+| False         | 3616   | 120256  | 135504  | 275586  | 12960   | 24063       |
+| True          | 4740   | 135037  | 120334  | 308969  | 24063   | 12960       |
+| unknown       | 1390   | 38998   | 39071   | 92801   | 6244    | 6244        |
+
 
 I grouped the dataset by teams that got the first dragon and those that didn't, and then calculated the sum of all the data. The more interesting findings were that the team that got the first dragon, won, had more total kills, fewer deaths, more assists, and got more total dragons. This pretty much shows that getting the first dragon is extremely helpful in improving the team's stats.
 
@@ -118,59 +119,60 @@ Null hypothesis: The distribution of the ‘league’ column is the same when th
 Alternative hypothesis: The distribution of the ‘league’ column is not the same when the ‘firstdragon’ column is missing as when it is not.
 Below is a graph of the distribution of the ‘league’ column.
 
-| league          |   fb_missing = True |   fb_missing = False |
-|:----------------|--------------------:|---------------------:|
-| DCup            |          0.0129403  |           0          |
-| LDL             |          0.406183   |           0          |
-| LPL             |          0.515457   |           0          |
-| MSI             |          0.0560748  |           0          |
-| WLDs            |          0.00934579 |           0.0142396  |
-| AC              |          0          |           0.00418811 |
-| AL              |          0          |           0.018308   |
-| CBLOL           |          0          |           0.0314706  |
-| CBLOLA          |          0          |           0.0330262  |
-| CDF             |          0          |           0.00825655 |
-| CT              |          0          |           0.00466675 |
-| EBL             |          0          |           0.0169917  |
-| EBLPA           |          0          |           0.0029915  |
-| EM              |          0          |           0.0477444  |
-| EPL             |          0          |           0.017949   |
-| ESLOL           |          0          |           0.0348211  |
-| EWC             |          0          |           0.00227354 |
-| GLL             |          0          |           0.018308   |
-| GLLPA           |          0          |           0.00454709 |
-| HC              |          0          |           0.0132823  |
-| HM              |          0          |           0.0185473  |
-| HW              |          0          |           0.0100515  |
-| IC              |          0          |           0.00813689 |
-| KeSPA           |          0          |           0.00574369 |
-| LAS             |          0          |           0.0345818  |
-| LCK             |          0          |           0.0576762  |
-| LCKC            |          0          |           0.0611463  |
-| LCO             |          0          |           0.018667   |
-| LCS             |          0          |           0.0229748  |
-| LEC             |          0          |           0.0351801  |
-| LFL             |          0          |           0.0283595  |
-| LFL2            |          0          |           0.0205815  |
-| LIT             |          0          |           0.0178294  |
-| LJL             |          0          |           0.0177097  |
-| LLA             |          0          |           0.0254876  |
-| LPLOL           |          0          |           0.0184277  |
-| LRN             |          0          |           0.0107694  |
-| LRS             |          0          |           0.0122053  |
-| LVP SL          |          0          |           0.0289578  |
-| NACL            |          0          |           0.0583942  |
-| NEXO            |          0          |           0.0192653  |
-| NLC             |          0          |           0.019026   |
-| NLC Aurora Open |          0          |           0.00921383 |
-| PCS             |          0          |           0.0354194  |
-| PRM             |          0          |           0.0288381  |
-| PRMP            |          0          |           0.0160345  |
-| TCL             |          0          |           0.0216585  |
-| TSC             |          0          |           0.0124447  |
-| UL              |          0          |           0.0189063  |
-| USP             |          0          |           0.00454709 |
-| VCS             |          0          |           0.0301544  |
+| League          | fb_missing = True | fb_missing = False |
+|------------------|------------------:|-------------------:|
+| DCup            |       0.0129403  |        0           |
+| LDL             |       0.406183   |        0           |
+| LPL             |       0.515457   |        0           |
+| MSI             |       0.0560748  |        0           |
+| WLDs            |       0.00934579 |        0.0142396   |
+| AC              |       0          |        0.00418811  |
+| AL              |       0          |        0.018308    |
+| CBLOL           |       0          |        0.0314706   |
+| CBLOLA          |       0          |        0.0330262   |
+| CDF             |       0          |        0.00825655  |
+| CT              |       0          |        0.00466675  |
+| EBL             |       0          |        0.0169917   |
+| EBLPA           |       0          |        0.0029915   |
+| EM              |       0          |        0.0477444   |
+| EPL             |       0          |        0.017949    |
+| ESLOL           |       0          |        0.0348211   |
+| EWC             |       0          |        0.00227354  |
+| GLL             |       0          |        0.018308    |
+| GLLPA           |       0          |        0.00454709  |
+| HC              |       0          |        0.0132823   |
+| HM              |       0          |        0.0185473   |
+| HW              |       0          |        0.0100515   |
+| IC              |       0          |        0.00813689  |
+| KeSPA           |       0          |        0.00574369  |
+| LAS             |       0          |        0.0345818   |
+| LCK             |       0          |        0.0576762   |
+| LCKC            |       0          |        0.0611463   |
+| LCO             |       0          |        0.018667    |
+| LCS             |       0          |        0.0229748   |
+| LEC             |       0          |        0.0351801   |
+| LFL             |       0          |        0.0283595   |
+| LFL2            |       0          |        0.0205815   |
+| LIT             |       0          |        0.0178294   |
+| LJL             |       0          |        0.0177097   |
+| LLA             |       0          |        0.0254876   |
+| LPLOL           |       0          |        0.0184277   |
+| LRN             |       0          |        0.0107694   |
+| LRS             |       0          |        0.0122053   |
+| LVP SL          |       0          |        0.0289578   |
+| NACL            |       0          |        0.0583942   |
+| NEXO            |       0          |        0.0192653   |
+| NLC             |       0          |        0.019026    |
+| NLC Aurora Open |       0          |        0.00921383  |
+| PCS             |       0          |        0.0354194   |
+| PRM             |       0          |        0.0288381   |
+| PRMP            |       0          |        0.0160345   |
+| TCL             |       0          |        0.0216585   |
+| TSC             |       0          |        0.0124447   |
+| UL              |       0          |        0.0189063   |
+| USP             |       0          |        0.00454709  |
+| VCS             |       0          |        0.0301544   |
+
 
 After the permutation test, the observation statistic is 0.0024468826290344773 and the p-value is 1.
 The following figure shows the empirical TVD distribution of this test:
@@ -193,33 +195,34 @@ The null hypothesis: the distribution of the ‘patch’ column is the same when
 The alternative hypothesis: the distribution of the ‘patch’ column is not the same when the ‘firstdragon’ column is missing as when it is not.
 
 Here is a graph of the ‘patch’ column.
-| patch   |   fb_missing = True |   fb_missing = False |
-|:--------|--------------------:|---------------------:|
-| 13.24   |           0.0129403 |           0          |
-| 14.01   |           0.109993  |           0.0749073  |
-| 14.02   |           0.136592  |           0.0630609  |
-| 14.04   |           0.123652  |           0.0589925  |
-| 14.05   |           0.0826743 |           0.0662917  |
-| 14.06   |           0.0366643 |           0.0256073  |
-| 14.08   |           0.136592  |           0.00694029 |
-| 14.09   |           0.0805176 |           0.0215388  |
-| 14.1    |           0.0625449 |           0.0534881  |
-| 14.11   |           0.0460101 |           0.0677277  |
-| 14.13   |           0.0740474 |           0.114515   |
-| 14.14   |           0.0431344 |           0.0287184  |
-| 14.15   |           0.0424155 |           0.0696422  |
-| unknown |           0.0122214 |           0          |
-| 14.03   |           0         |           0.0705995  |
-| 14.07   |           0         |           0.0217782  |
-| 14.12   |           0         |           0.0780184  |
-| 14.16   |           0         |           0.0291971  |
-| 14.17   |           0         |           0.0201029  |
-| 14.18   |           0         |           0.0869929  |
-| 14.19   |           0         |           0.0108891  |
-| 14.2    |           0         |           0.00981213 |
-| 14.21   |           0         |           0.0106498  |
-| 14.22   |           0         |           0.00478641 |
-| 14.23   |           0         |           0.00574369 |
+| Patch   | fb_missing = True  | fb_missing = False |
+|---------|-------------------:|-------------------:|
+| 13.24   |        0.0129403  |        0           |
+| 14.01   |        0.109993   |        0.0749073   |
+| 14.02   |        0.136592   |        0.0630609   |
+| 14.04   |        0.123652   |        0.0589925   |
+| 14.05   |        0.0826743  |        0.0662917   |
+| 14.06   |        0.0366643  |        0.0256073   |
+| 14.08   |        0.136592   |        0.00694029  |
+| 14.09   |        0.0805176  |        0.0215388   |
+| 14.1    |        0.0625449  |        0.0534881   |
+| 14.11   |        0.0460101  |        0.0677277   |
+| 14.13   |        0.0740474  |        0.114515    |
+| 14.14   |        0.0431344  |        0.0287184   |
+| 14.15   |        0.0424155  |        0.0696422   |
+| unknown |        0.0122214  |        0           |
+| 14.03   |        0          |        0.0705995   |
+| 14.07   |        0          |        0.0217782   |
+| 14.12   |        0          |        0.0780184   |
+| 14.16   |        0          |        0.0291971   |
+| 14.17   |        0          |        0.0201029   |
+| 14.18   |        0          |        0.0869929   |
+| 14.19   |        0          |        0.0108891   |
+| 14.2    |        0          |        0.00981213  |
+| 14.21   |        0          |        0.0106498   |
+| 14.22   |        0          |        0.00478641  |
+| 14.23   |        0          |        0.00574369  |
+
 
 After the permutation test, the observed statistic is 0.2511157600695836 and the p-value is 0.0.
 
@@ -261,13 +264,14 @@ The p-value is 0.001, which is much smaller than 0.05, so we reject the null hyp
 
 My prediction problem is to predict whether a player is a ‘bot’ player or not. This is a binary classification problem, which is ‘bot’ (True) or not (False). I think it is very interesting to predict who is a ‘bot’ just by using the post-game data, which shows the charm of data. We don't even need to spend half an hour watching the game. I encoded the position as a one-hot encoding, with players in the ‘bot’ position being True and players in other positions being False. This is our response variable position_bot. I chose to use accuracy as the main metric because this is a binary classification problem, and I am more concerned about the accuracy of the classification than the preference function of a particular class. I chose ‘kills’, ‘assists’, ‘deaths’ and ‘dpm’ as our features. These are all information we can get after the game.
 
-|   kills |   deaths |   assists |     dpm | position_bot   |
-|--------:|---------:|----------:|--------:|:---------------|
-|       1 |        3 |         1 | 225.62  | False          |
-|       0 |        4 |         3 | 234.178 | False          |
-|       0 |        2 |         0 | 318.293 | False          |
-|       2 |        4 |         0 | 346.511 | True           |
-|       0 |        3 |         3 | 205.228 | False          |
+| Kills   | Deaths   | Assists   | DPM      | Position Bot   |
+|---------|----------|-----------|----------|----------------|
+| 1       | 3        | 1         | 225.62   | False          |
+| 0       | 4        | 3         | 234.178  | False          |
+| 0       | 2        | 0         | 318.293  | False          |
+| 2       | 4        | 0         | 346.511  | True           |
+| 0       | 3        | 3         | 205.228  | False          |
+
 
 
 
